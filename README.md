@@ -25,11 +25,10 @@ To see the code coverage report, open the Report Navigator on the left, select t
 
 ## Tools And Resources Used
 
-- [CocoaPods](https://cocoapods.org/) - CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. It has over 33 thousand libraries and is used in over 2.2 million apps. CocoaPods can help you scale your projects elegantly.
+- [Package](https://developer.apple.com/documentation/swift_packages) - Swift Package Manager, or SPM, lets you manage your project dependencies, allowing you to import libraries into your applications with ease.
 
-## Library Used
-- [SDWebImage](https://github.com/rs/SDWebImage) - This library provides an async image downloader with cache support.
-Reachability.swift is a replacement for Apple's Reachability sample, re-written in Swift with closures.
+## Package Used
+- [Kingfisher](https://github.com/onevcat/Kingfisher) - This library provides an async image downloader with cache support.
 - [ReachabilitySwift ](https://github.com/ashleymills/Reachability.swift) - Reachability.swift is a replacement for Apple's Reachability sample, re-written in Swift with closures.
 
 
@@ -38,8 +37,7 @@ Reachability.swift is a replacement for Apple's Reachability sample, re-written 
 * Installation by cloning the repository
 * Go to directory
 * use command + B or Product -> Build to build the project
-* Incase of build fail due to dependency SDWebImageView, install SDWebImageView using CocoaPods.
-* Incase of build fail due to dependency ReachabilitySwift, install ReachabilitySwift using CocoaPods.
+* Incase of build fail due to dependency Kingfisher or ReachabilitySwift then do following steps  File -> Package -> Resolve Package versions 
 * Press run icon in Xcode or command + R to run the project on Simulator
 
 ## Running The Tests Manually 
