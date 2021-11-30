@@ -14,12 +14,7 @@ For testAPI we used
 
 This is configurable in Constants.Swift file in Project. 
 We used MVVM Design pattern and swift generic approach to develop this application.
-For CI/CD App using XcodeServer + Fastlane combination.
 
-We are generating TestCase and Coverage report using three tools, you can opt out any one as per your connivance:
-* **XcodeServer TestCase and Coverage report.**
-* **Fastlane+scan+slather TestCase and Coverage reports.**
-* **SonarQube TestCase and Coverage reports.**
 
 ## Tools And Resources Used
 
