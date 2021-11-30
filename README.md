@@ -20,7 +20,7 @@ We used MVVM Design pattern and swift generic approach to develop this applicati
 To see the code coverage report, open the Report Navigator on the left, select the report for the last test run, and open the Coverage tab at the top. swift is completely covered by the unit tests we wrote.
 
 <kbd >
-<img src="https://github.com/iLeafSolutionsPvtLtd/NYTNewsApp-IOS/blob/main/Piolet-Task/NYTestApp/coverage.png" width="80%" height="80%">
+<img src="https://github.com/iLeafSolutionsPvtLtd/NYTNewsApp-IOS/blob/main/Piolet-Task/NYTestApp/coverageUpdated.png" width="80%" height="80%">
 </kbd>
 
 ## Tools And Resources Used
