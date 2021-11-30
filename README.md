@@ -4,6 +4,7 @@ A simple app to hit the NY Times Most Popular Articles API and:
 * Show a list of articles newest first(sorted based on date)
 * Shows details when items on the list are tapped. 
 * Show Cached articles if network not available
+* App supports multiple window
 
 
 We'll are using the most viewed section of this API.
