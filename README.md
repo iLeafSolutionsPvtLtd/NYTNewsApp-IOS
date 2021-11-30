@@ -15,6 +15,11 @@ For testAPI we used
 This is configurable in Constants.Swift file in Project. 
 We used MVVM Design pattern and swift generic approach to develop this application.
 
+## Code coverage report 
+
+To see the code coverage report, open the Report Navigator on the left, select the report for the last test run, and open the Coverage tab at the top. swift is completely covered by the unit tests we wrote.
+
+
 
 ## Tools And Resources Used
 
