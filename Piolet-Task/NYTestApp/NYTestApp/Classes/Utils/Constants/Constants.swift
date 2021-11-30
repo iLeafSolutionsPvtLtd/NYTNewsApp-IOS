@@ -38,7 +38,7 @@ let kSecondryTextColor = UIColor.darkGray
 let kPrimaryBackGroundColor = UIColor.lightGray
 
 //String constants
-let kNewsTitleString = "NY Times Most Popular"
+let kNewsTitleString = "NY News"
 let kOkButtonTitle = "OK"
 let kNoNetworkErrorMessgae = "Internet is not availble. please check your internet setting and try again."
 let kNetworkErrorMessgae = "Network error occurred!. Please check your internet and try again."
