@@ -14,12 +14,14 @@ For testAPI we used
 
 This is configurable in Constants.Swift file in Project. 
 We used MVVM Design pattern and swift generic approach to develop this application.
-For CI/CD App using XcodeServer + Fastlane combination.
 
-We are generating TestCase and Coverage report using three tools, you can opt out any one as per your connivance:
-* **XcodeServer TestCase and Coverage report.**
-* **Fastlane+scan+slather TestCase and Coverage reports.**
-* **SonarQube TestCase and Coverage reports.**
+## Code coverage report 
+
+To see the code coverage report, open the Report Navigator on the left, select the report for the last test run, and open the Coverage tab at the top. swift is completely covered by the unit tests we wrote.
+
+<kbd >
+<img src="https://github.com/iLeafSolutionsPvtLtd/NYTNewsApp-IOS/blob/main/Piolet-Task/NYTestApp/coverageUpdated.png" width="80%" height="80%">
+</kbd>
 
 ## Tools And Resources Used
 
