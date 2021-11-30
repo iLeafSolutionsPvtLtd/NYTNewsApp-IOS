@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class NewsDetailUIViewController: UIViewController {
 
@@ -37,24 +37,28 @@ class NewsDetailUIViewController: UIViewController {
     deinit {
         articleDetailIcon.image = nil
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     func loadArticleImage() {
         if let urlStr = detailNewsImageUrl {
             let url = URL(string: urlStr)
             //Image Cache using SDWebImage
-            articleDetailIcon.sd_setShowActivityIndicatorView(true)
-            articleDetailIcon.sd_setIndicatorStyle(.gray)
-            articleDetailIcon.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "placeHolder.png"), options: SDWebImageOptions.delayPlaceholder, completed: nil)
+            articleDetailIcon.kf.indicatorType = .activity
+            articleDetailIcon.kf.setImage(
+                with: url,
+                placeholder: UIImage(named: "placeholderImage"),
+                options: [
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(1)),
+                    .cacheOriginalImage
+                ])
+            {
+                result in
+                switch result {
+                case .success(let value):
+                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                case .failure(let error):
+                    print("Job failed: \(error.localizedDescription)")
+                }
+            }
         }
     }
 

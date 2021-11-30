@@ -19,6 +19,8 @@ let kServerDataJSONKeyAbstract:String  = "abstract"
 let kServerDataJSONKeyMediaMetaData:String  = "media-metadata"
 let kServerDataJSONKeyImageURL:String  = "url"
 
+let kEstimatedNewsRableRowHeight:CGFloat = 100.0
+
 // API URLS
 let APIKey = "HOUaXCaDBpIMkYEFg9cmnBOxuK26hDBF"
 let kAPIPeriods:Int = 7

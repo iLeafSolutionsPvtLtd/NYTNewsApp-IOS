@@ -8,8 +8,6 @@
 
 import UIKit
 
-let kEstimatedNewsRableRowHeight:CGFloat = 100.0
-
 class NewsViewController: UIViewController {
 
     @IBOutlet weak var articleTableView:UITableView!

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class ArticleTableViewCell: UITableViewCell {
 
@@ -30,10 +30,34 @@ class ArticleTableViewCell: UITableViewCell {
             
             if let urlStr = articleCellVM.imageUrl {
                 let url = URL(string: urlStr)
-                //Image Cache using SDWebImage
-                articleIcon.sd_setShowActivityIndicatorView(true)
-                articleIcon.sd_setIndicatorStyle(.gray)
-                articleIcon.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "placeHolder.png"), options: SDWebImageOptions.delayPlaceholder, completed: nil)
+                
+                let processor = DownsamplingImageProcessor(size: articleIcon.bounds.size)
+                             |> RoundCornerImageProcessor(cornerRadius: 20)
+                articleIcon.kf.indicatorType = .activity
+                articleIcon.kf.setImage(
+                    with: url,
+                    placeholder: UIImage(named: "placeholderImage"),
+                    options: [
+                        .processor(processor),
+                        .scaleFactor(UIScreen.main.scale),
+                        .transition(.fade(1)),
+                        .cacheOriginalImage
+                    ])
+                {
+                    result in
+                    switch result {
+                    case .success(let value):
+                        print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                    case .failure(let error):
+                        print("Job failed: \(error.localizedDescription)")
+                    }
+                }
+                
+                
+//                //Image Cache using SDWebImage
+//                articleIcon.sd_setShowActivityIndicatorView(true)
+//                articleIcon.sd_setIndicatorStyle(.gray)
+//                articleIcon.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "placeHolder.png"), options: SDWebImageOptions.delayPlaceholder, completed: nil)
             }
         }
     }

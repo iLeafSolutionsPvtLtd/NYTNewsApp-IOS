@@ -31,7 +31,7 @@ class Utils
     }
     
     static func isConnectedToNetwork() -> Bool {
-        return (Reachability()?.connection != .none)
+        return (( try? Reachability().connection != .unavailable) != nil)
     }
 }
 

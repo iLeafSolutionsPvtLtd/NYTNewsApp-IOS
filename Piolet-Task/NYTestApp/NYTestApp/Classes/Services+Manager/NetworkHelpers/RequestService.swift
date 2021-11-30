@@ -20,7 +20,7 @@ final class RequestService {
         
         var request = RequestFactory.request(method: .GET, url: url)
         
-        if let reachability = Reachability(), reachability.connection == .none {
+        if let reachability = try? Reachability(), reachability.connection == .unavailable {
             request.cachePolicy = .returnCacheDataDontLoad
         }
         
